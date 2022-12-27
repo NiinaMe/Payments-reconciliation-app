@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Statement upload</title>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600' rel='stylesheet' type='text/css'>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+<style>
+    html, body {
+      min-height: 100%;
+      }
+      body, div, form, input,  p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      }
+      h1 {
+      font-size: 28px;
+      margin: 0;
+      font-weight: 400;
+      }
+      h3 {
+      margin: 12px 0;
+      color: #8ebf42;
+      }
+      h4 {
+      margin: 8px;
+      font-weight: 100;
+      font-style: italic;
+
+      color: #bc3737;
+      }
+      .main-block {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff;
+      }
+      form {
+      width: 100%;
+      padding: 20px;
+      }
+      fieldset {
+      width: 430px;
+      border: none;
+      border-top: 1px solid #8ebf42;
+      
+      }
+      
+      label {
+      padding: 0 5px;
+      text-align: right;
+      vertical-align: middle;
+      }
+      input {
+      padding: 5px;
+      vertical-align: middle;
+      }
+      button {
+      width: 225px;
+      padding: 10px 0;
+      margin: 10px auto;
+      border-radius: 5px; 
+      border: none;
+      background: #8ebf42; 
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      }
+      button:hover {
+      background: #82b534;
+      }
+      
+</style>
+</head>
+<body>
+    <div class="main-block">
+    <form action = "/display" method = "POST" 
+    enctype = "multipart/form-data">
+        <h1>Upload statements for reconciliation</h1>
+        <fieldset>
+            <legend>
+              <h3>Booking payout statements</h3>              
+            </legend>
+            <h4>Upload at least one Booking payout statement</h4>
+            <div  class="report-details">
+            <div><input type = "file" name = "apartment1" accept=".csv">
+                <label for="apartment1"> Apartment1 payout</label></div>
+            <div><input type = "file" name = "apartment2" accept=".csv">
+                <label for="apartment2"> Apartment2 payout</label></div>
+            <div><input type = "file" name = "apartment3" accept=".csv">
+                <label for="apartment3"> Apartment3 payout</label></div>
+        </div>
+        </fieldset>   
+        <fieldset>
+            <legend>
+                <h3>Bank statement</h3>
+            </legend>
+                <h4>Bank statement upload is required*</h4>
+            <div><input type = "file" name = "bank" accept=".csv" required>
+                <label for="bank" required> Bank statement*</label></div>
+        </fieldset>
+        
+               <button type="submit" href="/">Submit</button>
+               <button type= "reset"href="/">Reset</button>
+       </form>   
+</div>
+</body>
+</html>

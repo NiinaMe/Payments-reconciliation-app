@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+<title>Payout report</title>
+<style>
+    html, body {
+      min-height: 100%;
+      }
+    table, th, td {
+    border: 1px solid black;
+    border-spacing: 0;
+    border-collapse: collapse;
+    
+    }
+    th, td {
+     padding: 5px;
+    }
+     th {
+     text-align: left;
+    }
+    h1 {
+      font-size: 28px;
+      margin: 0;
+      font-weight: 400;
+      }
+    h2 {
+      font-weight: 100;
+      font-size: smaller;
+      font-style: italic;
+      color: #fe4141;
+      }
+</style>        
+</head>
+<body>
+    <h1>Payout reconciliation report</h1>
+    <h2>Refreshing the page will entail duplicate submission!</h2>
+<table>
+<pre>
+{% for table in content %}    
+    {{ table|safe }}
+{% endfor %}
+</pre>
+</table>  
+</body>
+</html>

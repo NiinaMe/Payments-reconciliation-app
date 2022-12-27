@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> <!--jQuery-->
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking project</title>
+<style type="text/css" media="all">
+h3 {
+	font-size: 18 px;
+    font-weight: bold;
+    margin-left: 40px;
+	color: #36631d;
+	text-align: left;
+	background-color: #fff;
+}
+#content h1 {
+	margin: 0;
+    margin-top: 40px;
+    margin-left: 40px;
+	padding: 0;
+	padding-bottom: 0px;
+	color: #245917;
+	background-color: #fff;
+}
+#content h3 {
+	margin: 0;
+    margin-left: 40px;
+	padding-bottom: 0px;
+    font-weight: bold;
+	font-size: 18px;
+	color: #458125;
+	background-color: #fff;
+}
+
+#content p {
+	margin: 0;
+    margin-right: 40px;
+    margin-left: 40px;
+	padding: 0;
+	padding-bottom: 10px;
+	background-color: #fff;
+}
+
+#content li {
+	margin: 0;
+    margin-right: 40px;
+    margin-left: 40px;
+	padding: 0;
+	padding-bottom: 10px;
+	background-color: #fff;
+}
+#content {
+    margin-top: 20px;
+	margin-right: 200px;
+	line-height: 18px;
+	padding-left: 200px;
+}
+#content .padding {
+	padding: 25px;
+	background-color: #fff;
+}
+body {
+
+font-family: Arial, Helvetica, Verdana, Sans-serif;
+	font-size: 12px;
+	color: #373737;
+	background: #ebebeb;
+	text-align: justify;
+}
+/*.image_container { 
+    margin-left: 0px;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        height: 100px; 
+    } 
+    img { 
+        transition: all 1s; 
+    } 
+    .enlarge { 
+        transform: scale(1.5); 
+    } */
+img {
+    height: auto;
+    max-width: 100%;
+}
+img.expanded {
+    max-width: none;
+}
+</style>
+
+</head>
+<body>
+     
+    <div id="content">
+    <div class="padding">
+        <h1>Booking payout reconciliation project</h1>
+        <br >
+        <p>The app was created for the Company that offers temporary housing solutions, including short-term rentals and fully furnished apartments, using Booking.com B.V. online rental platform.
+        The surge of online payments has added to the complexity of payment reconciliation. An automatic payment reconciliation system enables faster and more frequent reconciliation so
+        the company can recognize and correct payment errors effectively. </p>
+         <br >
+         <h3><a>Payment process</a></h3> <br>
+        <p>Booking.com B.V. operates as an agency model. All reservations are considered a direct transaction between the host and the guest.
+         The Company has to report gross sales, and booking commission is considered a cost.
+         Booking.com facilitates all the payments: guests pay for a stay online. The Booking charges its commission and sends the net amount to 
+         the host four times a month by bank transfer.  Each payout includes reservations where the guest checked out during the period since 
+         the last payment was processed. 
+         Every month the Company receives a <b>Payout summary statement</b> with details of reservations that guests paid for online, commission fees 
+         and refunds.</p>
+         <br >
+         <h3><a>Payout reconciliation </a></h3><br>        
+         <p>Payment reconciliation is an accounting process that ensures a company's internal records of payments owed and due match the transactions
+        that appear on statements from its bank. Reconciliation is critical for regulatory compliance purposes.
+        The Booking payments reconciliation project was created to automate the process of verifying Booking reported payments, comparing monthly Booking 
+        reported payout summary records to the monthly bank account statements.
+         The experts advise businesses to reconcile their payments at least once a month or, ideally, each time a statement is received.</p>    
+         <br >
+         <p>Payment reconciliation is generally a four-step process, with each step building on the previous one:</p>
+         <ol>
+         <li><b>Record retrieval:</b></li>
+        <p>Gather all relevant records needed to reconcile a payment — namely, Booking records of transactions and external statements from banks.</p>
+         <li><b>Matching:</b></li>
+        <p>During the matching phase, each recorded transaction is compared with bank statements. Those that match are eliminated from further review. 
+        Those that don't move on to the next phase. An automated system can easily take over the matching phase.</p>
+         <li><b>Reconciliation:</b></li>
+        <p>Transactions that failed to match are investigated to determine the cause or source of the discrepancy. 
+         This stage can be labor-intensive, which is why it makes sense to use automation to handle the previous step.</p>
+        <b><li>Finalization:</b></li>
+        <p>Once every transaction has been reconciled, journal entries can be made to fix errors and adjust general ledger accounts.</p>
+        </ol>
+        <br >
+         <h3><a>Automatic reconciliation</a></h3><br>
+         <p>The automatic reconciliation app was built with python language on its backend and HTML and CSS on the front-end.
+          The app allows users to upload up to 3 Booking Payout statements and the Bank statement in the CSV format for matching. The system
+         automatically matches the transactions and displays information in a table. Matching process is based on the Booking statement "Net" column
+        and Bank Statement "Summa"  column. Unmatched payments are displayed as NaNs.</p> 
+          <p> The preview of Booking Statements (all the personal data was modified or deleted for this example):</p>
+          <p><a href="image.jpg"><img src='Ap3CSV.jpg' alt="payout"/></a> </p>
+          <br>
+          <p>The preview of Bank Statement (all the personal data was modified or deleted for this example):</p> 
+          <p><a href="image.jpg"><img src='bankcsv.jpg' alt ="bank"/> </a></p>
+          <br>
+          <h3><a>Code</a></h3><br>
+          <p>To perform the matching process, the app converts CSV-files into Pandas dataframes for data cleaning and transformation.</p>
+          <p> The Booking payout summary data cleaning and transformation:</p>
+          <p><a href="image.jpg"><img src='BookingCode.jpg' alt="payout"/></a> </p>
+          <br>
+          <p>The Bank Statement data cleaning and transformation:</p>
+          <p><a href="image.jpg"><img src='BankCode.jpg' alt="bank"/></a> </p>
+          <br>
+          <p>A simple flask application is created for handling file uploads. Uploaded files will be stored in the 'static' folder.
+        Also, two HTML pages were created in the templates folder. Index.html holds an HTML form that accepts files. Content.html displays the result of matching.</p>
+        <p><a href="image.jpg"><img src='flask1.jpg' alt="flask_1"/></a> </p>
+          <br>
+          <p> Save and process uploaded booking statements</p> 
+          <p><a href="image.jpg"><img src='flask2.jpg' alt="flask_2"/></a> </p>
+          <br>
+          <p>Save and display the data matching result as HTML table</p>
+          <p><a href="image.jpg"><img src='flask3.jpg' alt="flask_3"/></a> </p>
+          <br>
+          <p>index.html browser view:</p>
+          <p><a href="image.jpg"><img src='indexHtml.jpg' alt="indexUser" width="50%"/></a> </p>
+          <br>
+          <p>index.html body code:</p>
+          <p><a href="image.jpg"><img src='indexBody.JPG' alt="indexBody" width="50%"/></a> </p>
+          <br>
+          <p>content.html browser view</p>
+          <p><a href="image.jpg"><img src='contentHtml.jpg' alt="contentHtml" width="70%"/></a> </p>
+          <p>The above reconciliation report showed that all reported and transferred payments were matched except one in row nr 6. The payment reported in 'AparmetmentTwo' Summary payout has not yet been transferred 
+            and needs a closer examination.</p>
+          <p>It is also important not to refresh the browser page because it will entail duplicate submission of the reports.</p>
+          <br>
+          <p>content.html body code:</p>
+          <p><a href="image.jpg"><img src='contentCode.jpg' alt="contentCode" width="50%"/></a> </p>
+          <br>
+          <p>For more details visit my GitHub page: <link rel="stylesheet" href="www.google.com"></p>
+
+    </div> 
+</div>
+<script>
+$(document).ready(function() {
+    var imageLinks = $('a[href$=".png"], a[href$=".jpg"], a[href$=".gif"], a[href$=".bmp"]');/*fetch all <a> elements that link to an image file*/
+    if (imageLinks.children('img').length) {  /*looks for an <img> child element*/
+        imageLinks.children('img').each(function() { /*if it finds one, it appends the “click to enlarge image” text in parentheses to the title attribute, and registers a click handler that prevents the link from firing to instead toggle the expanded class (see CSS) on our <img>.*/
+            var currentTitle = $(this).attr('title');
+            $(this).attr('title', currentTitle + ' (click to enlarge image)');
+        });
+        imageLinks.click(function(e) {
+            e.preventDefault();
+            $(this).children('img').toggleClass('expanded');
+        });
+    }
+});  
+</script> 
+</body>
+</html>

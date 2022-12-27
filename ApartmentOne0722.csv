@@ -1,0 +1,3 @@
+Type,Reference number,Departure or issue date,Guest name,Reservation status,Currency,Payment status,Amount,Commission,Payment charge,,Net,Payout date,Payout ID
+Reservation,3332244455,30-Jun-22,Guest1,ok,EUR,by_booking,59,-7.08,-0.77,,51.15,1-Jul-22,1111222366
+Reservation,2244558844,26-Jun-22,Guest2,ok,EUR,by_booking,404.6,-48.55,-5.26,,350.79,1-Jul-22,1111222366
